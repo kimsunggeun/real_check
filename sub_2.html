@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <title>장바구니</title>
+</head>
+
+<body>
+
+
+   
+
+    <section style="background-image: url(./img/Layer\ 2\ 2.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    overflow: hidden;
+    position:relative;
+    background-position-y: top;" class="si">
+
+
+<header>
+
+    <div class="logo">
+        <a href="index.html">
+            <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> bank</p>
+        </a>
+    </div>
+
+        <ul class="header_Menu">
+            <a href="index.html">
+                <li style="margin: 0px;" class="header_Menu_P">
+                    메인
+                </li>
+            </a>
+            
+            <a href="sub_1.html">
+                <li class="header_Menu_P">
+                    상품구매
+                </li>
+            </a>
+            <a href="sub_5.html">
+                <li class="header_Menu_P">
+                    상품주문내역
+                </li>
+                <a href="./sub_4(2).html">
+                    <li class="header_Menu_P">
+                        상품 설명서
+                    </li>
+                </a>
+
+        </ul>
+    </div>
+ 
+</header>
+
+
+
+        <div class="sub_2">
+            <div class="sub_2_titlebox">
+                <p class="sub_2_titlep">장바구니</p>
+            </div>
+
+            <form method="post" id="Delform" name="pc" action="http://10.159.28.42:8080/shopping_basket"  >
+
+                <div class="delbox">
+                    <input type="checkbox"   name='pc_Del' value='selectall'onclick='selectAll(this)' ><b>전채선택</b>
+                    <button type="button" class="Delbut" onclick="deleteDiv(this)">삭제</button>
+                </div>
+          
+
+            <div class="sub_2_contentbox">
+                <div class="sub_2_p_box">
+                    <p class="sub_2_p item">제품</p>
+                    <p class="sub_2_p qty">수량</p>
+                    <p class="sub_2_p price">가격</p>
+                </div>
+                <hr style="border: 1px solid #fff;">
+
+
+              
+                <div id="pccart">
+                    <p class="pcnone">장바구니를 표시할수없습니다<br> <br> <a href=""><span style="border-bottom: 1px solid #fff; font-weight: bold;">장바구니담으로가기</span></a></p>
+                </div>
+
+            <hr style="border: 1px solid #fff;">
+            </div>
+
+
+
+          
+            <div class="order">
+                <div class="Subtotal" id="pctotalpay">
+          
+                </div>
+                
+            <a href="">
+                <div class="sub_2_btn">
+                    <p class="sub_2_pbtn"> 주문하기</p>
+                 </div>
+            </a>
+            </div>
+
+
+
+        </div>
+    </form>
+
+
+   
+     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <footer style="background:#2d2d2d;">
+        <hr style="border: 1px solid #fff; margin-bottom: 100px;">
+        <div class="footerwapper">
+            <div class="footerbigpbox">
+                <div class="footer_pbox">
+                  
+                    <p class="footer_Bp">메인</p>
+                   
+                    <hr class="footer_hr">
+
+                    <a href="index.html" >
+                        <p class="footer_Sp">
+                            메인화면
+                        </p>
+                        </a>
+
+                    <a href="index.html#target1" >
+                    <p class="footer_Sp">
+                        카드장점
+                    </p>
+                    </a>
+                    <a href="index.html#target2">
+                    <p class="footer_Sp">
+                        카드구매
+                    </p>
+                    </a>
+                    <a href="index.html#target3">
+                    <p class="footer_Sp">
+                        연락하기
+                    </p>
+                </a>
+                    
+                </div>
+
+                <div class="footer_pbox">
+                    <p class="footer_Bp">카드구매</p>
+                    <hr class="footer_hr">
+                    <a href="sub_1.html">
+                    <p class="footer_Sp">
+                        카드구매하기
+                    </p>
+                   </a>
+                   <a href="sub_2.html">
+                    <p class="footer_Sp">
+                        장바구니
+                    </p>
+                </a>
+                <a href="sub_5.html">
+                    <p class="footer_Sp">
+                        주문조회
+                    </p>
+                </a>
+                </div>
+
+
+                <div class="footer_pbox">
+                    <p class="footer_Bp">FAQ</p>
+                    <hr class="footer_hr">
+                    <a href="sub_4(2).html">
+                    <p class="footer_Sp">
+                        상품설명서
+                    </p>
+                    </a>
+                    <a href="sub_4(3).html">
+                    <p class="footer_Sp">
+                        업비트 이용방법
+                    </p>
+                    </a>
+                    <a href="sub_4(8).html">
+                    <p class="footer_Sp">
+                        빗썸 이용방법
+                    </p>
+                </a>
+                
+                </div>
+
+
+                <div class="footer_pbox">
+                    <p class="footer_Bp">  © blockchain bank</p>
+                    <hr class="footer_hr">
+                    <p class="footer_Sp">
+                        Copyright 2021 blockchain bank<br>
+                         All rights reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+<script>
+
+    function none() {
+      
+      fetch("http://10.159.28.42:8080/post/cart")
+  
+        .then(res => res.json())
+
+        
+
+        .then(res => {
+
+
+            console.log(res)
+
+
+            const pccart =document.getElementById("pccart")
+            
+            
+            
+            
+
+            const pcnone = document.createElement("p")
+
+            pcnone.textContent =res.Information
+
+
+            pcnone.classList.add("pcnone")
+
+       
+         
+
+            pccart.appendChild(pcnone)
+         
+
+        })
+
+        .catch(err => {
+          el.innerHTML = "장바구니를 표시할수없습니다.";
+        });
+    }
+    
+    none()
+        
+</script>
+
+
+<script>
+
+    function shopping_basket() {
+      
+      fetch("http://10.159.28.42:8080//post/search/result")
+  
+        .then(res => res.json())
+
+       
+        .then(res => {
+           
+          
+
+         
+       
+          
+
+            const Black_card_Del = document.createElement("input");
+            Black_card_Del.setAttribute("type", "checkbox"); 
+            Black_card_Del.setAttribute("name", "Del1");
+            Black_card_Del.setAttribute("value", "Black_card_Del");
+            Black_card_Del.setAttribute("id", "Del");
+
+
+            const moBlack_card_Del = document.createElement("input");
+            moBlack_card_Del.setAttribute("type", "checkbox"); 
+            moBlack_card_Del.setAttribute("name", "Del4");
+            moBlack_card_Del.setAttribute("value", "Black_card_Del");
+            moBlack_card_Del.setAttribute("id", "moDel");
+
+
+
+            const Black_card_Image = document.createElement("img")
+            Black_card_Image.setAttribute("src","/img/Blockchain_card(Black).png")
+            Black_card_Image.setAttribute("width","100%")
+
+
+            const moBlack_card_Image = document.createElement("img")
+            moBlack_card_Image.setAttribute("src","/img/Blockchain_card(Black).png")
+            moBlack_card_Image.setAttribute("width","100%")
+
+          
+            const Black_card_Quantity = document.createElement("p")
+            Black_card_Quantity.textContent =res.Black_card.Quantity
+
+    
+            const Black_card_Total_order_amount = document.createElement("p")
+            Black_card_Total_order_amount.textContent =res.Black_card.Total_order_amount +"원"
+
+  
+            const Black_card_cord_color = document.createElement("p")
+            Black_card_cord_color.innerHTML = "blockchain card" + "<br>" + "<br>" + res.Black_card.cord_color
+
+         
+
+
+
+
+            const moBlack_card_Quantity = document.createElement("p")
+            moBlack_card_Quantity.textContent ="개수 : " + res.Black_card.Quantity
+
+            moBlack_card_Quantity.classList.add("sub_2_p")
+    
+            const moBlack_card_Total_order_amount = document.createElement("p")
+            moBlack_card_Total_order_amount.textContent ="가격 : " + res.Black_card.Total_order_amount +"원"
+
+            moBlack_card_Total_order_amount.classList.add("sub_2_p")
+  
+            const moBlack_card_cord_color = document.createElement("p")
+            moBlack_card_cord_color.innerHTML = "blockchain card " + res.Black_card.cord_color
+
+
+            const br = document.createElement("p")
+            const br1 = document.createElement("p")
+            const br2 = document.createElement("p")
+            br.innerHTML="<br>"
+            br1.innerHTML="<br>"
+            br2.innerHTML="<br>"
+        
+
+            Black_card_cord_color.classList.add("sub_2_p")
+           
+            Black_card_Quantity.classList.add("qtybnt")
+          
+            Black_card_Total_order_amount.classList.add("sub_2_p")
+           
+            const pccart = document.getElementById("pccart")
+            const mobilecart =document.getElementById("mobilecart")
+            
+            const mobilecartimgwapper = document.createElement("div")
+            mobilecartimgwapper.classList.add("mobileitem")
+
+
+            const mobilestotalpay =document.getElementById("mobilestotalpay")
+            
+            const pctotalpay  = document.getElementById("pctotalpay")
+
+            
+
+            
+
+            const mobilecartpwapper = document.createElement("div")
+            mobilecartpwapper.classList.add("mobilecart_pbox")
+            
+            const cartwapper = document.createElement("div")
+            cartwapper.classList.add("sub_2_itembox")
+
+            const pcimgbox = document.createElement("div")
+            pcimgbox.classList.add("item_imgbox")
+
+
+            const moimgbox = document.createElement("div")
+            moimgbox.classList.add("item_imgbox")
+
+
+           
+
+            const pbox1=document.createElement("div")
+            pbox1.classList.add("item_pbox")
+
+            const qtybox = document.createElement("div")
+            qtybox.classList.add("item_qtybox")
+            
+            const pbox2=document.createElement("div")
+            pbox2.classList.add("item_pbox2")
+           
+
+
+            pccart.appendChild(cartwapper)
+            cartwapper.appendChild(Black_card_Del)
+            cartwapper.appendChild(pcimgbox)
+            pcimgbox.appendChild(Black_card_Image)
+            cartwapper.appendChild(pbox1)
+            pbox1.appendChild(Black_card_cord_color)
+            cartwapper.appendChild(qtybox)
+            qtybox.appendChild(Black_card_Quantity)
+            cartwapper.appendChild(pbox2)
+            pbox2.appendChild(Black_card_Total_order_amount)
+
+           
+            mobilecart.appendChild(mobilecartimgwapper)
+            mobilecartimgwapper.appendChild(moBlack_card_Del)
+            mobilecartimgwapper.appendChild(moimgbox)
+            
+            moimgbox.appendChild(moBlack_card_Image)
+            mobilecart.appendChild(mobilecartpwapper)
+            mobilecartpwapper.appendChild(moBlack_card_cord_color)
+            mobilecartpwapper.appendChild(br)
+            mobilecartpwapper.appendChild(moBlack_card_Quantity)
+            mobilecartpwapper.appendChild(br1)
+            mobilecartpwapper.appendChild(moBlack_card_Total_order_amount)
+
+     
+
+           
+
+         
+  
+
+
+        })
+    
+        
+        .catch(err => {
+          el.innerHTML = "장바구니를 표시할수없습니다.";
+        });
+    }
+    
+    shopping_basket()
+  
+  
+  </script>
+
+
+<script>
+
+    function shopping_basket() {
+      
+      fetch("http://10.159.28.42:8080//post/search/result")
+  
+        .then(res => res.json())
+
+        .then(res => {
+           
+
+    
+         
+       
+          
+
+            const Orange_card_Del = document.createElement("input");
+            Orange_card_Del.setAttribute("type", "checkbox"); 
+            Orange_card_Del.setAttribute("name", "Del2");
+            Orange_card_Del.setAttribute("value", "Orange_card_Del");
+            Orange_card_Del.setAttribute("id", "Del2");
+
+            const moOrange_card_Del = document.createElement("input");
+            moOrange_card_Del.setAttribute("type", "checkbox"); 
+            moOrange_card_Del.setAttribute("name", "Del5");
+            moOrange_card_Del.setAttribute("value", "Orange_card_Del");
+            moOrange_card_Del.setAttribute("id", "moDel2");
+    
+            const Orange_card_Image = document.createElement("img")
+            Orange_card_Image.setAttribute("src","/img/Blockchain_card(Orange).png")
+            Orange_card_Image.setAttribute("width","100%")
+
+
+            const moOrange_card_Image = document.createElement("img")
+            moOrange_card_Image.setAttribute("src","/img/Blockchain_card(Orange).png")
+            moOrange_card_Image.setAttribute("width","100%")
+
+          
+            const Orange_card_Quantity = document.createElement("p")
+            Orange_card_Quantity.textContent =res.Orange_card.Quantity
+
+    
+            const Orange_card_Total_order_amount = document.createElement("p")
+            Orange_card_Total_order_amount.textContent =res.Orange_card.Total_order_amount +"원"
+
+  
+            const Orange_card_cord_color = document.createElement("p")
+            Orange_card_cord_color.innerHTML = "blockchain card" + "<br>" + "<br>" + res.Orange_card.cord_color
+
+         
+
+
+
+
+            const moOrange_card_Quantity = document.createElement("p")
+            moOrange_card_Quantity.textContent ="개수 : " + res.Orange_card.Quantity
+
+            moOrange_card_Quantity.classList.add("sub_2_p")
+    
+            const moOrange_card_Total_order_amount = document.createElement("p")
+            moOrange_card_Total_order_amount.textContent ="가격 : " + res.Orange_card.Total_order_amount +"원"
+
+            moOrange_card_Total_order_amount.classList.add("sub_2_p")
+  
+            const moOrange_card_cord_color = document.createElement("p")
+            moOrange_card_cord_color.innerHTML = "blockchain card " + res.Orange_card.cord_color
+
+
+            const br = document.createElement("p")
+            const br1 = document.createElement("p")
+            const br2 = document.createElement("p")
+            br.innerHTML="<br>"
+            br1.innerHTML="<br>"
+            br2.innerHTML="<br>"
+        
+
+            Orange_card_cord_color.classList.add("sub_2_p")
+           
+            Orange_card_Quantity.classList.add("qtybnt")
+          
+            Orange_card_Total_order_amount.classList.add("sub_2_p")
+           
+            const pccart = document.getElementById("pccart")
+            const mobilecart =document.getElementById("mobilecart")
+            
+            const mobilecartimgwapper = document.createElement("div")
+            mobilecartimgwapper.classList.add("mobileitem")
+
+
+            const mobilecartpwapper = document.createElement("div")
+            mobilecartpwapper.classList.add("mobilecart_pbox")
+            
+            const cartwapper = document.createElement("div")
+            cartwapper.classList.add("sub_2_itembox")
+
+            const pcimgbox = document.createElement("div")
+            pcimgbox.classList.add("item_imgbox")
+
+
+            const moimgbox = document.createElement("div")
+            moimgbox.classList.add("item_imgbox")
+
+
+           
+
+            const pbox1=document.createElement("div")
+            pbox1.classList.add("item_pbox")
+
+            const qtybox = document.createElement("div")
+            qtybox.classList.add("item_qtybox")
+            
+            const pbox2=document.createElement("div")
+            pbox2.classList.add("item_pbox2")
+            
+
+
+            pccart.appendChild(cartwapper)
+            cartwapper.appendChild(Orange_card_Del)
+            cartwapper.appendChild(pcimgbox)
+            pcimgbox.appendChild(Orange_card_Image)
+            cartwapper.appendChild(pbox1)
+            pbox1.appendChild(Orange_card_cord_color)
+            cartwapper.appendChild(qtybox)
+            qtybox.appendChild(Orange_card_Quantity)
+            cartwapper.appendChild(pbox2)
+            pbox2.appendChild(Orange_card_Total_order_amount)
+
+
+
+            
+            mobilecart.appendChild(mobilecartimgwapper)
+            mobilecartimgwapper.appendChild(moOrange_card_Del)
+            mobilecartimgwapper.appendChild(moimgbox)
+            
+            moimgbox.appendChild(moOrange_card_Image)
+            mobilecart.appendChild(mobilecartpwapper)
+            mobilecartpwapper.appendChild(moOrange_card_cord_color)
+            mobilecartpwapper.appendChild(br)
+            mobilecartpwapper.appendChild(moOrange_card_Quantity)
+            mobilecartpwapper.appendChild(br1)
+            mobilecartpwapper.appendChild(moOrange_card_Total_order_amount)
+
+
+
+            
+
+
+})
+        
+  
+   
+        
+        .catch(err => {
+          el.innerHTML = "장바구니를 표시할수없습니다.";
+        });
+    }
+    
+    shopping_basket()
+  
+  
+  </script>
+
+
+<script>
+
+    function shopping_basket() {
+      
+      fetch("http://10.159.28.42:8080//post/search/result")
+  
+        .then(res => res.json())
+
+        .then(res => {
+           
+
+    
+         
+       
+          
+
+            const blue_card_Del = document.createElement("input");
+            blue_card_Del.setAttribute("type", "checkbox"); 
+            blue_card_Del.setAttribute("name", "Del3");
+            blue_card_Del.setAttribute("value", "blue_card_Del");
+            blue_card_Del.setAttribute("id", "Del3");
+
+            
+            const moblue_card_Del = document.createElement("input");
+            moblue_card_Del.setAttribute("type", "checkbox"); 
+            moblue_card_Del.setAttribute("name", "Del6");
+            moblue_card_Del.setAttribute("value", "blue_card_Del");
+            moblue_card_Del.setAttribute("id", "moDel3");
+
+            const blue_card_Image = document.createElement("img")
+            blue_card_Image.setAttribute("src","/img/Blockchain_card(blue).png")
+            blue_card_Image.setAttribute("width","100%")
+
+
+            const moblue_card_Image = document.createElement("img")
+            moblue_card_Image.setAttribute("src","/img/Blockchain_card(blue).png")
+            moblue_card_Image.setAttribute("width","100%")
+
+          
+            const blue_card_Quantity = document.createElement("p")
+            blue_card_Quantity.textContent =res.blue_card.Quantity
+
+    
+            const blue_card_Total_order_amount = document.createElement("p")
+            blue_card_Total_order_amount.textContent =res.blue_card.Total_order_amount +"원"
+
+  
+            const blue_card_cord_color = document.createElement("p")
+            blue_card_cord_color.innerHTML = "blockchain card" + "<br>" + "<br>" + res.blue_card.cord_color
+
+         
+
+
+
+
+            const moblue_card_Quantity = document.createElement("p")
+            moblue_card_Quantity.textContent ="개수 : " + res.blue_card.Quantity
+
+            moblue_card_Quantity.classList.add("sub_2_p")
+    
+            const moblue_card_Total_order_amount = document.createElement("p")
+            moblue_card_Total_order_amount.textContent ="가격 : " + res.blue_card.Total_order_amount +"원"
+
+            moblue_card_Total_order_amount.classList.add("sub_2_p")
+  
+            const moblue_card_cord_color = document.createElement("p")
+            moblue_card_cord_color.innerHTML = "blockchain card " + res.blue_card.cord_color
+
+
+            const br = document.createElement("p")
+            const br1 = document.createElement("p")
+            const br2 = document.createElement("p")
+            br.innerHTML="<br>"
+            br1.innerHTML="<br>"
+            br2.innerHTML="<br>"
+        
+
+            blue_card_cord_color.classList.add("sub_2_p")
+           
+            blue_card_Quantity.classList.add("qtybnt")
+          
+            blue_card_Total_order_amount.classList.add("sub_2_p")
+           
+            const pccart = document.getElementById("pccart")
+            const mobilecart =document.getElementById("mobilecart")
+            
+            const mobilecartimgwapper = document.createElement("div")
+            mobilecartimgwapper.classList.add("mobileitem")
+
+
+            const mobilecartpwapper = document.createElement("div")
+            mobilecartpwapper.classList.add("mobilecart_pbox")
+            
+            const cartwapper = document.createElement("div")
+            cartwapper.classList.add("sub_2_itembox")
+
+            const pcimgbox = document.createElement("div")
+            pcimgbox.classList.add("item_imgbox")
+
+
+            const moimgbox = document.createElement("div")
+            moimgbox.classList.add("item_imgbox")
+
+
+           
+
+            const pbox1=document.createElement("div")
+            pbox1.classList.add("item_pbox")
+
+            const qtybox = document.createElement("div")
+            qtybox.classList.add("item_qtybox")
+            
+            const pbox2=document.createElement("div")
+            pbox2.classList.add("item_pbox2")
+            
+
+
+            pccart.appendChild(cartwapper)
+            cartwapper.appendChild(blue_card_Del)
+            cartwapper.appendChild(pcimgbox)
+            pcimgbox.appendChild(blue_card_Image)
+            cartwapper.appendChild(pbox1)
+            pbox1.appendChild(blue_card_cord_color)
+            cartwapper.appendChild(qtybox)
+            qtybox.appendChild(blue_card_Quantity)
+            cartwapper.appendChild(pbox2)
+            pbox2.appendChild(blue_card_Total_order_amount)
+
+
+            mobilecart.appendChild(mobilecartimgwapper)
+            mobilecartimgwapper.appendChild(moblue_card_Del)
+            mobilecartimgwapper.appendChild(moimgbox)
+            moimgbox.appendChild(moblue_card_Image)
+            mobilecart.appendChild(mobilecartpwapper)
+            mobilecartpwapper.appendChild(moblue_card_cord_color)
+            mobilecartpwapper.appendChild(br)
+            mobilecartpwapper.appendChild(moblue_card_Quantity)
+            mobilecartpwapper.appendChild(br1)
+            mobilecartpwapper.appendChild(moblue_card_Total_order_amount)
+
+        
+
+
+
+        
+
+
+  
+        })
+    
+        
+        .catch(err => {
+          el.innerHTML = "장바구니를 표시할수없습니다.";
+        });
+    }
+    
+    shopping_basket()
+  
+  
+  </script>
+
+
+
+
+
+<script>
+
+    function shopping_basket() {
+      
+        fetch("http://10.159.28.42:8080//post/search/result")
+  
+        .then(res => res.json())
+
+       
+        .then(res => {
+
+            
+            
+         
+         
+
+            const mobilestotalpay =document.getElementById("mobilestotalpay")
+            
+            const pctotalpay  = document.getElementById("pctotalpay")
+
+            
+
+            const pctotalplayp = document.createElement("p")
+
+            pctotalplayp.innerHTML ="총금액 :"+res.Total_order_amount+"원"
+
+            pctotalplayp.classList.add("nb")
+
+            const mobilestotalpayp = document.createElement("p")
+            
+            mobilestotalpayp.innerHTML ="총금액 :"+res.Total_order_amount+"원"
+            
+            mobilestotalpayp.style.marginTop='5px'
+
+           
+            pctotalpay.appendChild(pctotalplayp)
+
+
+      
+
+        })
+
+   
+    }
+    
+    shopping_basket()
+        
+</script>
+    
+
+
+    
+<script>
+
+    function deleteDiv() {
+
+
+        
+        if (confirm("정말 삭제하시겠습니까??") == true) { 
+            
+            $("#Delform").submit();
+
+            
+        } 
+            
+        else {
+            return
+        }
+
+    }
+</script>
+
+
+
+<script>
+
+    function deleteDiv2() {
+
+
+        
+        if (confirm("정말 삭제하시겠습니까??") == true) { 
+            
+            $("#Delform2").submit();
+
+            
+        } 
+            
+        else {
+            return
+        }
+
+    }
+</script>
+
+<script>
+    function selectAll(selectAll)  {
+        const checkboxes 
+       = document.getElementsByName('Del');
+        const checkboxes1 
+       = document.getElementsByName('Del1');
+       const checkboxes2 
+       = document.getElementsByName('Del2');
+       const checkboxes3 
+       = document.getElementsByName('Del3');
+       const checkboxes4 
+       = document.getElementsByName('Del4');
+       const checkboxes5 
+       = document.getElementsByName('Del5');
+       const checkboxes6 
+       = document.getElementsByName('Del6');
+   
+     
+       
+  
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = selectAll.checked;
+  })
+  checkboxes1.forEach((checkbox) => {
+    checkbox.checked = selectAll.checked;
+  })
+  checkboxes2.forEach((checkbox) => {
+    checkbox.checked = selectAll.checked;
+  })
+  checkboxes3.forEach((checkbox) => {
+    checkbox.checked = selectAll.checked;
+  })
+  checkboxes4.forEach((checkbox) => {
+    checkbox.checked = selectAll.checked;
+  })
+  checkboxes5.forEach((checkbox) => {
+    checkbox.checked = selectAll.checked;
+  })
+  checkboxes6.forEach((checkbox) => {
+    checkbox.checked = selectAll.checked;
+  })
+
+
+}
+
+
+
+
+</script>
+
+
+
+
+</html>

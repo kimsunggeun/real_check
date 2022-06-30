@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+/* 웹 초기화 코드*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 18px;
+	font: inherit;
+	vertical-align: baseline;
+  	text-decoration: none!important;
+	color:#fff
+	;
+	font-weight: 400;
+  	font-family:'Ubuntu', sans-serif;;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	background-color: #2d2d2d;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+p{font-size: 18px;}
+
+
+footer{
+	
+	   width: 100%;
+}
+
+
+input{border: none; border-radius: 6px;}
+
+
+
+
+
+
+option{font-size: 20px;  text-align: center !important; appearance:none;
+    text-align-last: center !important;
+    text-align: center !important;
+    color: #2d2d2d;
+    -ms-text-align-last: center !important; 
+    -moz-text-align-last: center !important;
+    -ms-text-align-last: center !important;
+    -moz-text-align-last: center !important;
+	-ms-text-align-last: center !important;
+	-moz-text-align-last: center !important;
+	-webkit-appearance: none; /* 네이티브 외형 감추기 */ -moz-appearance: none; appearance: none;   text-align: center; appearance:none;
+    text-align-last: center !important;
+    text-align: center !important;
+	vertical-align:middle !important;}
+
+
+
+
+
+
+
+section{width: 100%;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background-color: #2D2D2D;
+
+}
+
+header{max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 5%;
+    position: relative;
+    align-items: center;
+    display: flex;
+    height: 71px;
+    justify-content: space-between;
+		
+	 }
+
+
+
+
+::selection{background-color: #EF4234;}
+
+select{-webkit-appearance: none; /* 네이티브 외형 감추기 */ -moz-appearance: none; appearance: none;   text-align: center !important;  appearance:none;
+    text-align-last: center !important;
+    text-align: center !important;
+	border-radius: 6px; text-align-last: center !important; text-align: center !important;
+    color: #2d2d2d;
+	-ms-text-align-last: center !important;
+	-moz-text-align-last: center !important;
+	vertical-align:middle !important;
+	background-color: #fff;
+}
+
+
+
+thead{border-top: #EAEAEA solid 1px;
+	  border-bottom: solid #EAEAEA 1px;}
+td,th{color: #2D2D2D ;}
+
+td,th{width: 180px; height: 40px; padding-top: 20px; text-align: center;}
+td{vertical-align: middle;} 
+
+
+
+@media all and (min-width:480px) and (max-width:767px){
+	td,th{width: 100px; }
+}
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width:480px) {
+	td,th{width: 64px;  font-size: 12px;}
+}
+

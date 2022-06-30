@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <title>주문조회 </title>
+</head>
+
+<body>
+
+    <section class="si" class="background-image: url(./img/Layer\ 2\ 2.png);
+background-repeat: no-repeat;
+background-position: right;
+overflow: hidden;
+position:relative;
+background-position-y: top;">
+  <header>
+
+    <div class="logo">
+        <a href="index.html"> 
+            <p class="logop"><span class="font-class: italic; font-weight: bold;">@blockchain</span> bank</p>
+        </a>
+    </div>
+
+        <ul class="header_Menu">
+            <a href="index.html">
+                <li class="margin: 0px;" class="header_Menu_P">
+                    메인
+                </li>
+            </a>
+            
+            <a href="sub_1.html">
+                <li class="header_Menu_P">
+                    상품구매
+                </li>
+            </a>
+            <a href="sub_5.html">
+                <li class="header_Menu_P">
+                    상품주문내역
+                </li>
+                <a href="./sub_4(2).html">
+                    <li class="header_Menu_P">
+                        상품 설명서
+                    </li>
+                </a>
+    
+
+        </ul>
+    </div>
+ 
+</header>
+
+<div class="box2">
+    <div class="box_pbox">
+        <p class="box_p">
+            주문조회
+        </p>
+    </div>
+    <div class="box2_contents">
+        <div class="box2_pbox">
+            <p class="box2_p" style="display: inline-block;" id ="Product_order_number">
+              
+
+               
+            </p>
+            <a href="">
+            <p style="display: inline-block; color: #EF4234; font-size: 15px; margin-left: 10px;">
+                배송조회하기
+            </p>
+            </a>
+ 
+        </div>
+
+        <div class="box2_tablebox">
+            <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>상품명</th>
+                    <th class="td_sub6">수량</th>
+                    <th class="td_sub6" >금액</th>
+                    <th class="td_sub6" >송장번호</th>
+                    <th class="td_sub6">상태</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="Black">
+                   
+                    
+                
+                    
+                  </tr>
+                  <tr id="Orange">
+                   
+                  </tr>
+                  <tr id="blue">
+                   
+                  </tr>
+                  
+                </tbody>
+                </table>
+        </div>
+    </div>
+ 
+
+    <a href="./sub_5.html">
+    <div class="btn1124">
+        <p class="btn1124p">돌아가기</p>
+    </div>
+</a>
+</div>
+  
+
+
+
+    </section>
+
+
+    <footer class="background:#2d2d2d;">
+        <hr class="border: 1px solid #fff; margin-bottom: 100px;">
+        <div class="footerwapper">
+            <div class="footerbigpbox">
+                <div class="footer_pbox">
+                  
+                    <p class="footer_Bp">메인</p>
+                   
+                    <hr class="footer_hr">
+
+                    <a href="index.html" >
+                        <p class="footer_Sp">
+                            메인화면
+                        </p>
+                        </a>
+
+                    <a href="index.html#target1" >
+                    <p class="footer_Sp">
+                        카드장점
+                    </p>
+                    </a>
+                    <a href="index.html#target2">
+                    <p class="footer_Sp">
+                        카드구매
+                    </p>
+                    </a>
+                    <a href="index.html#target3">
+                    <p class="footer_Sp">
+                        연락하기
+                    </p>
+                </a>
+                    
+                </div>
+
+                <div class="footer_pbox">
+                    <p class="footer_Bp">카드구매</p>
+                    <hr class="footer_hr">
+                    <a href="sub_1.html">
+                    <p class="footer_Sp">
+                        카드구매하기
+                    </p>
+                   </a>
+                   <a href="sub_2.html">
+                    <p class="footer_Sp">
+                        장바구니
+                    </p>
+                </a>
+                <a href="sub_5.html">
+                    <p class="footer_Sp">
+                        주문조회
+                    </p>
+                </a>
+                </div>
+
+
+                <div class="footer_pbox">
+                    <p class="footer_Bp">FAQ</p>
+                    <hr class="footer_hr">
+                    <a href="sub_4(2).html">
+                    <p class="footer_Sp">
+                        상품설명서
+                    </p>
+                    </a>
+                    <a href="sub_4(3).html">
+                    <p class="footer_Sp">
+                        업비트 이용방법
+                    </p>
+                    </a>
+                    <a href="sub_4(8).html">
+                    <p class="footer_Sp">
+                        빗썸 이용방법
+                    </p>
+                </a>
+                
+                </div>
+
+
+                <div class="footer_pbox">
+                    <p class="footer_Bp">  © blockchain bank</p>
+                    <hr class="footer_hr">
+                    <p class="footer_Sp">
+                        Copyright 2021 blockchain bank<br>
+                         All rights reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+<script>
+
+    function Product_order_number() {
+      
+      fetch("http://10.159.28.42:8080/post/search/result")
+  
+        .then(res => res.json())
+
+       
+        .then(res => {
+          
+
+          const Product_order_number = document.getElementById("Product_order_number")
+          Product_order_number.innerText ="주문번호:" + res.Product_order_number
+
+       
+           
+         
+    
+        })
+    
+        
+     
+    }
+    
+    Product_order_number()
+  
+  
+  </script>
+
+
+<script>
+
+    function Black() {
+      
+      fetch("http://10.159.28.42:8080/post/search/result")
+  
+        .then(res => res.json())
+
+       
+        .then(res => {
+          
+          
+            console.log(res)
+        
+          const Black = document.getElementById("Black")
+
+          const Black_card_Imagebox = document.createElement("td")
+           
+           const Black_card_Image  = document.createElement("img")
+           Black_card_Image.setAttribute("src",res.Black_card.Image_path)
+           Black_card_Image.setAttribute("width","50%")
+ 
+             
+           const Black_card_cord_color = document.createElement("td")
+           Black_card_cord_color.innerHTML = "blockchain card" +"("+ res.Black_card.cord_color+")"
+
+           const Black_card_Quantity = document.createElement("td")
+            Black_card_Quantity.textContent =res.Black_card.amount 
+            Black_card_Quantity.classList.add("td_sub6")
+
+
+            const Black_card_Total_order_amount = document.createElement("td")
+            Black_card_Total_order_amount.textContent = res.Black_card.Total_order_amount 
+            Black_card_Total_order_amount.classList.add("td_sub6")
+   
+            const Black_card_Invoice_number = document.createElement("td")
+            Black_card_Invoice_number.innerHTML =res.Black_card.courier_inquiry+"<br>"+ res.Black_card.Invoice_number  
+            Black_card_Invoice_number.classList.add("td_sub6")
+
+            const Black_card_State = document.createElement("td")
+            Black_card_State.innerHTML = res.Black_card.processing_status+"<br>"
+            Black_card_State.classList.add("td_sub6") 
+
+   
+
+
+
+
+            Black.appendChild(Black_card_Imagebox)
+            Black_card_Imagebox.appendChild(Black_card_Image)
+            Black.appendChild(Black_card_cord_color)
+            Black.appendChild(Black_card_Quantity)
+            Black.appendChild(Black_card_Total_order_amount)
+            Black.appendChild(Black_card_Invoice_number)
+            Black.appendChild(Black_card_State)
+           
+        })
+    
+        
+     
+    }
+    
+    Black()
+  
+  
+  </script>
+<script>
+
+    function Orange() {
+      
+      fetch("http://10.159.28.42:8080/post/search/result")
+  
+        .then(res => res.json())
+
+       
+        .then(res => {
+          
+          
+        
+          const Orange = document.getElementById("Orange")
+
+          const Orange_card_Imagebox = document.createElement("td")
+           
+           const Orange_card_Image  = document.createElement("img")
+           Orange_card_Image.setAttribute("src",res.Orange_card.Image_path)
+           Orange_card_Image.setAttribute("width","50%")
+ 
+             
+           const Orange_card_cord_color = document.createElement("td")
+           Orange_card_cord_color.innerHTML = "blockchain card" + "("+ res.Orange_card.cord_color+")"
+
+           const Orange_card_Quantity = document.createElement("td")
+            Orange_card_Quantity.textContent =res.Orange_card.amount 
+            Orange_card_Quantity.classList.add("td_sub6")
+
+
+            const Orange_card_Total_order_amount = document.createElement("td")
+            Orange_card_Total_order_amount.textContent = res.Orange_card.Total_order_amount 
+            Orange_card_Total_order_amount.classList.add("td_sub6")
+   
+            const Orange_card_Invoice_number = document.createElement("td")
+            Orange_card_Invoice_number.innerHTML =res.Orange_card.courier_inquiry+"<br>"+ res.Orange_card.Invoice_number 
+            Orange_card_Invoice_number.classList.add("td_sub6")
+
+            const Orange_card_State = document.createElement("td")
+            Orange_card_State.innerHTML = res.Orange_card.processing_status +"<br>"
+            Orange_card_State.classList.add("td_sub6")
+
+ 
+
+            Orange.appendChild(Orange_card_Imagebox)
+            Orange_card_Imagebox.appendChild(Orange_card_Image)
+            Orange.appendChild(Orange_card_cord_color)
+            Orange.appendChild(Orange_card_Quantity)
+            Orange.appendChild(Orange_card_Total_order_amount)
+            Orange.appendChild(Orange_card_Invoice_number)
+            Orange.appendChild(Orange_card_State)
+        
+        })
+    
+        
+     
+    }
+    
+    Orange()
+  
+  
+  </script>
+
+
+<script>
+
+    function blue() {
+      
+      fetch("http://10.159.28.42:8080/post/search/result")
+  
+        .then(res => res.json())
+
+       
+        .then(res => {
+          
+          
+        
+          const blue = document.getElementById("blue")
+
+          const blue_card_Imagebox = document.createElement("td")
+           
+           const blue_card_Image  = document.createElement("img")
+           blue_card_Image.setAttribute("src",res.blue_card.Image_path)
+           blue_card_Image.setAttribute("width","50%")
+ 
+             
+           const blue_card_cord_color = document.createElement("td")
+           blue_card_cord_color.innerHTML = "blockchain card" + "("+ res.blue_card.cord_color+")"
+
+           const blue_card_Quantity = document.createElement("td")
+            blue_card_Quantity.textContent =res.blue_card.amount 
+            blue_card_Quantity.classList.add("td_sub6")
+
+
+            const blue_card_Total_order_amount = document.createElement("td")
+            blue_card_Total_order_amount.textContent = res.blue_card.Total_order_amount 
+            blue_card_Total_order_amount.classList.add("td_sub6")
+   
+            const blue_card_Invoice_number = document.createElement("td")
+            blue_card_Invoice_number.innerHTML =res.blue_card.courier_inquiry+"<br>"+ res.blue_card.Invoice_number 
+            blue_card_Invoice_number.classList.add("td_sub6")
+
+            const blue_card_State = document.createElement("td")
+            blue_card_State.innerHTML = res.blue_card.processing_status +"<br>"
+            blue_card_State.classList.add("td_sub6")
+
+
+
+            blue.appendChild(blue_card_Imagebox)
+            blue_card_Imagebox.appendChild(blue_card_Image)
+            blue.appendChild(blue_card_cord_color)
+            blue.appendChild(blue_card_Quantity)
+            blue.appendChild(blue_card_Total_order_amount)
+            blue.appendChild(blue_card_Invoice_number)
+            blue.appendChild(blue_card_State)
+     
+        })
+    
+        
+     
+    }
+    
+    blue()
+  
+  
+  </script>
+
+
+</html>

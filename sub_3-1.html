@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <title>결제 페이지</title>
+</head>
+
+<body>
+
+    
+
+    <section style="background-image: url(./img/Layer\ 2\ 2.png);
+background-repeat: no-repeat;
+background-position: right;
+height: auto;
+
+position:relative;
+background-position-y: top;">
+ <header>
+
+    <div class="logo">
+        <a href="index.html">
+            <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> bank</p>
+        </a>
+    </div>
+
+        <ul class="header_Menu">
+            <a href="index.html">
+                <li style="margin: 0px;" class="header_Menu_P">
+                    메인
+                </li>
+            </a>
+            
+            <a href="sub_1.html">
+                <li class="header_Menu_P">
+                    상품구매
+            </a>
+            <a href="sub_5.html">
+                <li class="header_Menu_P">
+                    상품주문내역
+                </li>
+                <a href="./sub_4(2).html">
+                    <li class="header_Menu_P">
+                        상품 설명서
+                    </li>
+                </a>
+        </ul>
+    </div>
+   
+</header>
+
+<form action="" method="post" >
+    
+        <div class="sub_3">
+
+            <div class="titlebox oo" style="text-align: center;">
+                <p class="sub_3_titlep" style="line-height: 50px;">Order Place<br>
+                    <span style="font-size: 24px; ">(상품주문완료)</span>
+                </p>
+            </div>
+
+
+            <div class="dummy" id="dummy">
+              
+            </div>
+
+            <a href="./sub_4(2).html">
+                <div class="modal_qnabtn" style="text-align: center;">
+                    <p class="modal_qnabtnp">상품이용방법</p>
+                </div>
+            </a>
+
+            <div class="modal_close1" style="text-align: center;">
+                <p class="modal_closep">Continue</p>
+            </div>
+    
+
+        <a href="./sub_5.html">
+            <div class="modal_sub5" >
+                <p class="modal_sub5p">주문내역 확인하기</p>
+            </div>
+        </a>
+
+    </form>
+
+    </section>
+
+
+
+
+    <footer style="background:#2d2d2d;">
+        <hr style="border: 1px solid #fff; margin-bottom: 100px;">
+        <div class="footerwapper">
+            <div class="footerbigpbox">
+                <div class="footer_pbox">
+                  
+                    <p class="footer_Bp">메인</p>
+                   
+                    <hr class="footer_hr">
+
+                    <a href="index.html" >
+                        <p class="footer_Sp">
+                            메인화면
+                        </p>
+                        </a>
+
+                    <a href="index.html#target1" >
+                    <p class="footer_Sp">
+                        카드장점
+                    </p>
+                    </a>
+                    <a href="index.html#target2">
+                    <p class="footer_Sp">
+                        카드구매
+                    </p>
+                    </a>
+                    <a href="index.html#target3">
+                    <p class="footer_Sp">
+                        연락하기
+                    </p>
+                </a>
+                    
+                </div>
+
+                <div class="footer_pbox">
+                    <p class="footer_Bp">카드구매</p>
+                    <hr class="footer_hr">
+                    <a href="sub_1.html">
+                    <p class="footer_Sp">
+                        카드구매하기
+                    </p>
+                   </a>
+                   <a href="sub_2.html">
+                    <p class="footer_Sp">
+                        장바구니
+                    </p>
+                </a>
+                <a href="sub_5.html">
+                    <p class="footer_Sp">
+                        주문조회
+                    </p>
+                </a>
+                </div>
+
+
+                <div class="footer_pbox">
+                    <p class="footer_Bp">FAQ</p>
+                    <hr class="footer_hr">
+                    <a href="sub_4(2).html">
+                    <p class="footer_Sp">
+                        상품설명서
+                    </p>
+                    </a>
+                    <a href="sub_4(3).html">
+                    <p class="footer_Sp">
+                        업비트 이용방법
+                    </p>
+                    </a>
+                    <a href="sub_4(8).html">
+                    <p class="footer_Sp">
+                        빗썸 이용방법
+                    </p>
+                </a>
+                
+                </div>
+
+
+                <div class="footer_pbox">
+                    <p class="footer_Bp">  © blockchain bank</p>
+                    <hr class="footer_hr">
+                    <p class="footer_Sp">
+                        Copyright 2021 blockchain bank<br>
+                         All rights reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+
+<script>
+
+    function Product_order_number() {
+      
+      fetch("http://10.159.28.42:8080/post/cart")
+  
+        .then(res => res.json())
+
+       
+        .then(res => {
+          
+
+            
+
+           const dummy= document.getElementById("dummy")
+           const Product_order_number_sub_3_1 = document.createElement("div")
+           Product_order_number_sub_3_1.classList.add("Product_order_number_sub_3_1")
+          
+           const Product_order_number = document.createElement("p")
+           Product_order_number.innerHTML = "주문번호:"+ res.Product_order_number
+            
+
+            
+            dummy.appendChild(Product_order_number_sub_3_1)
+            Product_order_number_sub_3_1.appendChild(Product_order_number)
+    
+        })
+    
+        
+     
+    }
+    
+    Product_order_number()
+  
+  
+  </script>
+
+
+<script>
+
+    function Black_card() {
+      
+      fetch("http://10.159.28.42:8080/post/cart")
+  
+        .then(res => res.json())
+
+       
+        .then(res => {
+          
+
+           const dummy= document.getElementById("dummy")
+        
+          
+            const Black_card_Image = document.createElement("img")
+            Black_card_Image.setAttribute("src","\\static\\img\\Blockchain_card(Black).png")
+            Black_card_Image.setAttribute("width","100%")
+
+
+         
+          
+            const Black_card_Quantity = document.createElement("p")
+            Black_card_Quantity.textContent =res.Black_card.Quantity +"개"
+            Black_card_Quantity.classList.add("Order_Summaryp2p")
+    
+            const Black_card_Total_order_amount = document.createElement("p")
+            Black_card_Total_order_amount.textContent = res.Black_card.Total_order_amount + "원"
+            Black_card_Total_order_amount.classList.add("Order_Summaryp2p")
+  
+            const Black_card_cord_color = document.createElement("p")
+            Black_card_cord_color.innerHTML = "blockchain card" + "<br>" +  res.Black_card.cord_color
+            Black_card_cord_color.classList.add("Order_Summaryp")
+         
+
+       
+          
+  
+       
+
+
+            const  Order_Summarybox = document.createElement("div")
+
+            Order_Summarybox.classList.add("Order_Summarybox")
+            
+            const Order_SummaryBpbox = document.createElement("div")
+
+            Order_SummaryBpbox.classList.add("Order_SummaryBpbox")
+
+            
+
+            const Order_SummaryBp = document.createElement("p")
+            Order_SummaryBp.classList.add("Emailtext")
+            Order_SummaryBp.innerHTML ="Order Summary" 
+            
+            
+
+            const Order_Summarycontnest = document.createElement("div")
+            Order_Summarycontnest.classList.add("Order_Summarycontnest")
+
+            const Order_Summaryimg =document.createElement("div")
+            Order_Summaryimg.classList.add("Order_Summaryimg")
+
+            const Order_Summarypbox = document.createElement("div")
+            Order_Summarypbox.classList.add("Order_Summarypbox")
+
+    
+
+            const Order_Summarypbox2  = document.createElement("div")
+            Order_Summarypbox2.classList.add("Order_Summarypbox2")
+
+            const Order_Summaryp2 =document.createElement("div")
+            Order_Summaryp2.classList.add("Order_Summaryp2")
+
+
+            const Order_Summaryp2p1 = document.createElement("p")
+            Order_Summaryp2p1.classList.add("Order_Summaryp2p")
+            Order_Summaryp2p1.innerText = "수량:"
+
+            const Order_Summaryp2p2 = document.createElement("p")
+            Order_Summaryp2p2.classList.add("Order_Summaryp2p")
+            Order_Summaryp2p2.innerText = "금액:"
+            
+            const Order_Summaryp3 =document.createElement("div")
+            Order_Summaryp3.classList.add("Order_Summaryp3")
+
+            
+
+            
+            dummy.appendChild(Order_Summarybox)
+            Order_Summarybox.appendChild(Order_SummaryBpbox)
+            Order_SummaryBpbox.appendChild(Order_SummaryBp)
+            Order_Summarybox.appendChild(Order_Summarycontnest)
+            Order_Summarycontnest.appendChild(Order_Summaryimg)
+            Order_Summaryimg.appendChild(Black_card_Image)
+            Order_Summarycontnest.appendChild(Order_Summarypbox)
+            Order_Summarypbox.appendChild(Black_card_cord_color)
+            Order_Summarycontnest.appendChild(Order_Summarypbox2)
+            Order_Summarypbox2.appendChild(Order_Summaryp2)
+            Order_Summaryp2.appendChild(Order_Summaryp2p1)
+            Order_Summaryp2.appendChild(Order_Summaryp2p2)
+            Order_Summarypbox2.appendChild(Order_Summaryp3)
+            Order_Summaryp3.appendChild(Black_card_Quantity)
+            Order_Summaryp3.appendChild(Black_card_Total_order_amount)
+
+    
+        })
+    
+        
+     
+    }
+    
+    Black_card()
+  
+  
+  </script>
+
+
+<script>
+
+    function Orange_card() {
+      
+      fetch("http://10.159.28.42:8080/post/cart")
+  
+        .then(res => res.json())
+
+       
+        .then(res => {
+          
+
+           const dummy= document.getElementById("dummy")
+        
+          
+            const Orange_card_Image = document.createElement("img")
+            Orange_card_Image.setAttribute("src","\\static\\img\\Blockchain_card(Black).png")
+            Orange_card_Image.setAttribute("width","100%")
+
+
+         
+          
+            const Orange_card_Quantity = document.createElement("p")
+            Orange_card_Quantity.textContent =res.Orange_card.Quantity +"개"
+            Orange_card_Quantity.classList.add("Order_Summaryp2p")
+    
+            const Orange_card_Total_order_amount = document.createElement("p")
+            Orange_card_Total_order_amount.textContent = res.Orange_card.Total_order_amount + "원"
+            Orange_card_Total_order_amount.classList.add("Order_Summaryp2p")
+  
+            const Orange_card_cord_color = document.createElement("p")
+            Orange_card_cord_color.innerHTML = "blockchain card" + "<br>" +  res.Orange_card.cord_color
+            Orange_card_cord_color.classList.add("Order_Summaryp")
+         
+
+       
+          
+  
+       
+
+
+            const  Order_Summarybox = document.createElement("div")
+
+            Order_Summarybox.classList.add("Order_Summarybox")
+            
+            const Order_SummaryBpbox = document.createElement("div")
+
+            Order_SummaryBpbox.classList.add("Order_SummaryBpbox")
+
+            
+
+            const Order_SummaryBp = document.createElement("p")
+            Order_SummaryBp.classList.add("Emailtext")
+            Order_SummaryBp.innerHTML ="Order Summary" 
+            
+            
+
+            const Order_Summarycontnest = document.createElement("div")
+            Order_Summarycontnest.classList.add("Order_Summarycontnest")
+
+            const Order_Summaryimg =document.createElement("div")
+            Order_Summaryimg.classList.add("Order_Summaryimg")
+
+            const Order_Summarypbox = document.createElement("div")
+            Order_Summarypbox.classList.add("Order_Summarypbox")
+
+    
+
+            const Order_Summarypbox2  = document.createElement("div")
+            Order_Summarypbox2.classList.add("Order_Summarypbox2")
+
+            const Order_Summaryp2 =document.createElement("div")
+            Order_Summaryp2.classList.add("Order_Summaryp2")
+
+
+            const Order_Summaryp2p1 = document.createElement("p")
+            Order_Summaryp2p1.classList.add("Order_Summaryp2p")
+            Order_Summaryp2p1.innerText = "수량:"
+
+            const Order_Summaryp2p2 = document.createElement("p")
+            Order_Summaryp2p2.classList.add("Order_Summaryp2p")
+            Order_Summaryp2p2.innerText = "금액:"
+            
+            const Order_Summaryp3 =document.createElement("div")
+            Order_Summaryp3.classList.add("Order_Summaryp3")
+
+            
+
+            
+            dummy.appendChild(Order_Summarybox)
+            Order_Summarybox.appendChild(Order_SummaryBpbox)
+            Order_SummaryBpbox.appendChild(Order_SummaryBp)
+            Order_Summarybox.appendChild(Order_Summarycontnest)
+            Order_Summarycontnest.appendChild(Order_Summaryimg)
+            Order_Summaryimg.appendChild(Orange_card_Image)
+            Order_Summarycontnest.appendChild(Order_Summarypbox)
+            Order_Summarypbox.appendChild(Orange_card_cord_color)
+            Order_Summarycontnest.appendChild(Order_Summarypbox2)
+            Order_Summarypbox2.appendChild(Order_Summaryp2)
+            Order_Summaryp2.appendChild(Order_Summaryp2p1)
+            Order_Summaryp2.appendChild(Order_Summaryp2p2)
+            Order_Summarypbox2.appendChild(Order_Summaryp3)
+            Order_Summaryp3.appendChild(Orange_card_Quantity)
+            Order_Summaryp3.appendChild(Orange_card_Total_order_amount)
+
+    
+        })
+    
+        
+     
+    }
+    
+    Orange_card()
+  
+  
+  </script>
+
+
+
+<script>
+
+    function blue_card() {
+      
+      fetch("http://10.159.28.42:8080/post/cart")
+  
+        .then(res => res.json())
+
+       
+        .then(res => {
+          
+
+           const dummy= document.getElementById("dummy")
+        
+          
+            const blue_card_Image = document.createElement("img")
+            blue_card_Image.setAttribute("src","\\static\\img\\Blockchain_card(Black).png")
+            blue_card_Image.setAttribute("width","100%")
+
+
+         
+          
+            const blue_card_Quantity = document.createElement("p")
+            blue_card_Quantity.textContent =res.blue_card.Quantity +"개"
+            blue_card_Quantity.classList.add("Order_Summaryp2p")
+    
+            const blue_card_Total_order_amount = document.createElement("p")
+            blue_card_Total_order_amount.textContent = res.blue_card.Total_order_amount + "원"
+            blue_card_Total_order_amount.classList.add("Order_Summaryp2p")
+  
+            const blue_card_cord_color = document.createElement("p")
+            blue_card_cord_color.innerHTML = "blockchain card" + "<br>" +  res.blue_card.cord_color
+            blue_card_cord_color.classList.add("Order_Summaryp")
+         
+
+       
+          
+  
+       
+
+
+            const  Order_Summarybox = document.createElement("div")
+
+            Order_Summarybox.classList.add("Order_Summarybox")
+            
+            const Order_SummaryBpbox = document.createElement("div")
+
+            Order_SummaryBpbox.classList.add("Order_SummaryBpbox")
+
+            
+
+            const Order_SummaryBp = document.createElement("p")
+            Order_SummaryBp.classList.add("Emailtext")
+            Order_SummaryBp.innerHTML ="Order Summary" 
+            
+            
+
+            const Order_Summarycontnest = document.createElement("div")
+            Order_Summarycontnest.classList.add("Order_Summarycontnest")
+
+            const Order_Summaryimg =document.createElement("div")
+            Order_Summaryimg.classList.add("Order_Summaryimg")
+
+            const Order_Summarypbox = document.createElement("div")
+            Order_Summarypbox.classList.add("Order_Summarypbox")
+
+    
+
+            const Order_Summarypbox2  = document.createElement("div")
+            Order_Summarypbox2.classList.add("Order_Summarypbox2")
+
+            const Order_Summaryp2 =document.createElement("div")
+            Order_Summaryp2.classList.add("Order_Summaryp2")
+
+
+            const Order_Summaryp2p1 = document.createElement("p")
+            Order_Summaryp2p1.classList.add("Order_Summaryp2p")
+            Order_Summaryp2p1.innerText = "수량:"
+
+            const Order_Summaryp2p2 = document.createElement("p")
+            Order_Summaryp2p2.classList.add("Order_Summaryp2p")
+            Order_Summaryp2p2.innerText = "금액:"
+            
+            const Order_Summaryp3 =document.createElement("div")
+            Order_Summaryp3.classList.add("Order_Summaryp3")
+
+            
+
+            
+            dummy.appendChild(Order_Summarybox)
+            Order_Summarybox.appendChild(Order_SummaryBpbox)
+            Order_SummaryBpbox.appendChild(Order_SummaryBp)
+            Order_Summarybox.appendChild(Order_Summarycontnest)
+            Order_Summarycontnest.appendChild(Order_Summaryimg)
+            Order_Summaryimg.appendChild(blue_card_Image)
+            Order_Summarycontnest.appendChild(Order_Summarypbox)
+            Order_Summarypbox.appendChild(blue_card_cord_color)
+            Order_Summarycontnest.appendChild(Order_Summarypbox2)
+            Order_Summarypbox2.appendChild(Order_Summaryp2)
+            Order_Summaryp2.appendChild(Order_Summaryp2p1)
+            Order_Summaryp2.appendChild(Order_Summaryp2p2)
+            Order_Summarypbox2.appendChild(Order_Summaryp3)
+            Order_Summaryp3.appendChild(blue_card_Quantity)
+            Order_Summaryp3.appendChild(blue_card_Total_order_amount)
+
+    
+        })
+    
+        
+     
+    }
+    
+    blue_card()
+  
+  
+  </script>
+</html>
