@@ -76,7 +76,7 @@
                 <p class="sub_2_titlep">장바구니</p>
             </div>
 
-            <form method="post" id="Delform" name="pc" action="http://10.159.28.42:8080/shopping_basket"  >
+            <form method="post" id="Delform" name="pc" action="shopping_basket"  >
 
                 <div class="delbox">
                     <input type="checkbox"   name='pc_Del' value='selectall'onclick='selectAll(this)' ><b>전채선택</b>
@@ -257,7 +257,7 @@
             console.log(res)
 
 
-            const pccart =document.getElementById("pccart")
+            const pccart = document.getElementById("pccart")
             
             
             
@@ -265,7 +265,7 @@
 
             const pcnone = document.createElement("p")
 
-            pcnone.textContent =res.Information
+            pcnone.textContent = res.Information
 
 
             pcnone.classList.add("pcnone")
